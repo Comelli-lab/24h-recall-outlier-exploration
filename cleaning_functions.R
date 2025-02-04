@@ -1,3 +1,5 @@
+
+
 getBrokenEntries <- function(dataframe, statusCol, brokenCode) {
     removed<-dataframe[which(dataframe[,statusCol]==brokenCode),]
     return(removed)
