@@ -29,24 +29,12 @@
 #TOC> ==========================================================================
 
 # ====    1  Packages  =========================================================
-
-# Package names
-packages <- c("ggplot2", "dplyr", 'sas7bdat', "lubridate")
-
-# Install packages not yet installed
-installed_packages <- packages %in% rownames(installed.packages())
-if (any(installed_packages == FALSE)) {
-  install.packages(packages[!installed_packages])
-}
-
-# Packages loading
-invisible(lapply(packages, library, character.only = TRUE))
+# see install_packages.R
 
 # ====   2  Data  ==============================================================
+# Load the CCHS data
 cchs <-
-  read.csv(
-    "~/GitHub/ASA24_MiGrowD/Data/cchs-82M0024-E-2015-nu-side/cchs-82M0024-E-2015-nu-side_F1.csv"
-  )
+  read.csv("cchs-82M0024-E-2015-nu-side_F1.csv")
 
 # ====   3  CCHS data exploration  =============================================
 
